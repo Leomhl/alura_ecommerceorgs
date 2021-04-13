@@ -5,8 +5,15 @@ class OrgsHighlightsCard extends StatelessWidget {
   final String title;
   final Color color;
   final String description;
+  final Function btnAction;
 
-  OrgsHighlightsCard({this.img, this.title, this.description, this.color});
+  OrgsHighlightsCard({
+    @required this.img,
+    @required this.title,
+    @required this.description,
+    @required this.color,
+    @required this.btnAction
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +22,13 @@ class OrgsHighlightsCard extends StatelessWidget {
       child: Container(
         width: 450,
         decoration: BoxDecoration(
-            color: Color.fromRGBO(254, 238, 210, 1),
+            color: color,
             borderRadius: BorderRadius.circular(20),
         ),
 
         child: Padding(
           padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-          child: Row(
+          child:   Row(
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,42 +41,40 @@ class OrgsHighlightsCard extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromRGBO(70, 70, 70, 1)
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Color.fromRGBO(70, 70, 70, 1)
                     ),
                   ),
                   Text(
                     description,
                     style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: Color.fromRGBO(70, 70, 70, 1)
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        color: Color.fromRGBO(70, 70, 70, 1)
                     ),
                   ),
                   SizedBox(height: 5),
                   ElevatedButton(
-                    onPressed: (){},
+                    onPressed: btnAction,
                     child: Text(
                       'Ver agora',
                       style: TextStyle(
-                        fontWeight: FontWeight.bold
+                          fontWeight: FontWeight.bold
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: color,
+                      primary: Color.fromRGBO(42, 159, 133, 1),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
-                  ),
+                  )
                 ],
               ),
-              Expanded(
-                  child: Image.asset('assets/images/fruits.png')
-              ),
+              Expanded(child: Image.asset(img)),
             ],
-          )
+          ),
         ),
       ),
     );

@@ -18,7 +18,7 @@ class OrgsNavigationBar extends StatelessWidget {
           topRight: Radius.circular(20),
           topLeft: Radius.circular(20),
         ),
-        child:BottomNavigationBar(
+        child: BottomNavigationBar(
           showUnselectedLabels: true,
           selectedItemColor: Color.fromRGBO(42, 159, 133, 1),
           unselectedItemColor: Colors.grey,

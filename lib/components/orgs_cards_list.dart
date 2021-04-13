@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-import 'orgs_highlights_card.dart';
+class OrgsCardsList extends StatelessWidget {
+  final List<Widget> cards;
+  final double heightList;
 
-class OrgsHighlightsCardsList extends StatelessWidget {
-  final List<OrgsHighlightsCard> cards;
-
-  OrgsHighlightsCardsList({this.cards});
+  OrgsCardsList({
+    @required this.cards,
+    @required this.heightList
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.symmetric(vertical: 20.0),
-        height: 160.0,
+        height: heightList,
         child: new ListView(
             scrollDirection: Axis.horizontal,
             children: cards
