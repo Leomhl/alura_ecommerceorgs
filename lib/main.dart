@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
       title: 'Ecommerce orgs',
       theme: ThemeData(
         fontFamily: 'Montserrat',
-        scaffoldBackgroundColor: Colors.grey[100],
       ),
       home: HomeScreen(),
     );

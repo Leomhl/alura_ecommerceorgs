@@ -5,6 +5,7 @@ import 'package:proj/components/orgs_navigation_bar.dart';
 import 'package:proj/components/orgs_search_bar.dart';
 import 'package:proj/components/orgs_spotlight_card.dart';
 import 'package:proj/components/orgs_stores_card.dart';
+import 'package:proj/screens/producer_details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -15,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       body: SingleChildScrollView(
         child: Padding(
             padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
@@ -95,7 +97,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ]
                 ),
-
                 SizedBox(height: 20),
                 Text(
                   'Mais acessados',
@@ -107,29 +108,60 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(height: 10),
                 StoresCard(
+                  action: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
+                    );
+                  },
                   img: 'assets/images/store1.png',
                   distance: '10',
                   title: 'Manjericão',
                 ),
                 SizedBox(height: 10),
                 StoresCard(
+                  action: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
+                    );
+                  },
                   img: 'assets/images/store2.png',
                   distance: '2',
                   title: 'Agrotoy',
                 ),
                 SizedBox(height: 10),
                 StoresCard(
+                  action: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
+                    );
+                  },
                   img: 'assets/images/store3.png',
                   distance: '12',
                   title: 'Jenny Jack',
                 ),
                 SizedBox(height: 10),
                 StoresCard(
+                  action: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
+                    );
+                  },
                   img: 'assets/images/store4.png',
                   distance: '10',
                   title: 'Grow',
                 ),
+                SizedBox(height: 10),
                 StoresCard(
+                  action: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
+                    );
+                  },
                   img: 'assets/images/store5.png',
                   distance: '5',
                   title: 'Potager',
