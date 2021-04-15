@@ -60,7 +60,7 @@ class OrgsHighlightsCard extends StatelessWidget {
                     child: Text(
                       'Ver agora',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold
+                        fontWeight: FontWeight.bold
                       ),
                     ),
                     style: ElevatedButton.styleFrom(

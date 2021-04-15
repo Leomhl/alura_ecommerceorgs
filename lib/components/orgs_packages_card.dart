@@ -8,14 +8,14 @@ class OrgsPackagesCard extends StatelessWidget {
   final String description = 'Lorem ipsum dolor sit amet, consectetur'
   'adipiscing elit. Maecenas tincidunt cursus lectus. Mauris lacinia '
   'pharetra arcu, a fermentum justo vestibulum at. Nam venenatis leo ';
-  final String price = '70,00';
+  final String price;
 
-  // OrgsPackagesCard({
-  //   @required this.title,
-  //   @required this.photo,
-  //   @required this.description,
-  //   @required this.price,
-  // });
+  OrgsPackagesCard({
+    // @required this.title,
+    // @required this.photo,
+    // @required this.description,
+    @required this.price,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +51,7 @@ class OrgsPackagesCard extends StatelessWidget {
               softWrap: false,
             ),
             SizedBox(height: 10),
+            price != null ?
             Text(
               'R\$ $price',
               style: TextStyle(
@@ -58,7 +59,7 @@ class OrgsPackagesCard extends StatelessWidget {
                 fontWeight: FontWeight.w700,
                 color: Color.fromRGBO(42, 159, 133, 1),
               ),
-            ),
+            ) : Container(),
             SizedBox(height: 15),
             Divider(),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proj/components/orgs_packages_card.dart';
+import 'package:proj/screens/package_details_screen.dart';
 
 class ProducerDetailsScreen extends StatelessWidget {
 
@@ -31,85 +32,91 @@ class ProducerDetailsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            children: [
-              Image.asset(
-                'assets/images/bg_producer.png',
-                fit: BoxFit.fitWidth,
-                width: double.infinity,
-                height: 180,
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 150, 20, 15),
-                child: Row(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      child: Image.asset(logo),
-                    ),
-                    SizedBox(width: 10,),
-                    Expanded(
-                        child: Text(
-                          title,
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        )
-                    ),
-                    Text(
-                      '10 km',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
+      body: InkWell(
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PackageDetailsScreen()),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                Image.asset(
+                  'assets/images/bg_producer.png',
+                  fit: BoxFit.fitWidth,
+                  width: double.infinity,
+                  height: 180,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 150, 20, 15),
+                  child: Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        child: Image.asset(logo),
                       ),
-                    ),
-                  ],
+                      SizedBox(width: 10,),
+                      Expanded(
+                          child: Text(
+                            title,
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          )
+                      ),
+                      Text(
+                        '10 km',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Text(
+                description,
+                style: TextStyle(
+                  color: Color.fromRGBO(163, 163, 163, 1),
+                  fontSize: 18
+                )
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+              child: Text(
+                'Cestas',
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 25,
                 ),
               ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Text(
-              description,
-              style: TextStyle(
-                color: Color.fromRGBO(163, 163, 163, 1),
-                fontSize: 18
+            ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
+                child: ListView(
+                  children: [
+                    OrgsPackagesCard(price: '12,00'),
+                    OrgsPackagesCard(price: '12,00'),
+                    OrgsPackagesCard(price: '12,00'),
+                    OrgsPackagesCard(price: '12,00'),
+                    OrgsPackagesCard(price: '12,00'),
+                    OrgsPackagesCard(price: '12,00'),
+                    OrgsPackagesCard(price: '12,00'),
+                    OrgsPackagesCard(price: '12,00'),
+                  ],
+                ),
               )
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-            child: Text(
-              'Cestas',
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: 25,
-              ),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
-              child: ListView(
-                children: [
-                  OrgsPackagesCard(),
-                  OrgsPackagesCard(),
-                  OrgsPackagesCard(),
-                  OrgsPackagesCard(),
-                  OrgsPackagesCard(),
-                  OrgsPackagesCard(),
-                  OrgsPackagesCard(),
-                  OrgsPackagesCard(),
-                ],
-              ),
-            )
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

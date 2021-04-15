@@ -36,6 +36,7 @@ flutter:
     - assets/images/store5.png
     - assets/images/bg_producer.png
     - assets/images/cenouras.png
+    - assets/images/package_details.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
