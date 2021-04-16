@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class OrgsNavigationBar extends StatelessWidget {
+  final String screen;
+
+  OrgsNavigationBar({
+    @required this.screen,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,6 +25,7 @@ class OrgsNavigationBar extends StatelessWidget {
           topLeft: Radius.circular(20),
         ),
         child: BottomNavigationBar(
+
           showUnselectedLabels: true,
           selectedItemColor: Color.fromRGBO(42, 159, 133, 1),
           unselectedItemColor: Colors.grey,
@@ -26,6 +33,7 @@ class OrgsNavigationBar extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Início',
+
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.favorite),

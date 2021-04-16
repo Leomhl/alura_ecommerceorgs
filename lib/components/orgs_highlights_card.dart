@@ -48,10 +48,11 @@ class OrgsHighlightsCard extends StatelessWidget {
                   ),
                   Text(
                     description,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
-                        color: Color.fromRGBO(70, 70, 70, 1)
+                        color: Color.fromRGBO(70, 70, 70, 1),
                     ),
                   ),
                   SizedBox(height: 5),

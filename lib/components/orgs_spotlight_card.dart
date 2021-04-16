@@ -20,7 +20,7 @@ class OrgsSpotlightCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
       child: Container(
-        width: 450,
+        width: 370,
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(20),
@@ -72,7 +72,7 @@ class OrgsSpotlightCard extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   child: Container(
                     color: Color.fromRGBO(254, 238, 210, 1),
-                    child: Image.asset('assets/images/fruits.png'),
+                    child: Image.asset(img),
                     width: 120,
                   ),
               ),

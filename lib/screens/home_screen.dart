@@ -48,22 +48,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 OrgsCardsList(heightList: 160, cards: [
                   OrgsHighlightsCard(
                     img: 'assets/images/fruits.png',
-                    title: 'Orgs commerce',
-                    description: 'Uma descrição',
+                    title: 'Frutas frescas',
+                    description: 'Cestas de frutas frescas',
                     color: Color.fromRGBO(254, 238, 210, 1),
                     btnAction: (){},
                   ),
                   OrgsHighlightsCard(
-                    img: 'assets/images/fruits.png',
-                    title: 'Lorem ipsum',
-                    description: 'Uma descrição',
-                    color: Color.fromRGBO(254, 238, 210, 1),
-                    btnAction: (){},
-                  ),
-                  OrgsHighlightsCard(
-                    img: 'assets/images/fruits.png',
-                    title: 'Frutas gostosas',
-                    description: 'Uma descrição',
+                    img: 'assets/images/vegetables.png',
+                    title: 'Legumes frescos',
+                    description: 'Todo dia temos legumes frescos',
                     color: Color.fromRGBO(254, 238, 210, 1),
                     btnAction: (){},
                   ),
@@ -85,13 +78,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       img: 'assets/images/fruits.png',
                       color: Color.fromRGBO(224, 255, 249, 1),
                       description: 'Pack de frutas',
-                      place: 'Fruits punk',
+                      place: 'Grow',
                       price: '25,90',
                     ),
                     OrgsSpotlightCard(
-                      img: 'assets/images/fruits.png',
+                      img: 'assets/images/vegetables.png',
                       color: Color.fromRGBO(224, 255, 249, 1),
-                      description: 'Legumes frescos',
+                      description: 'Pack de legumes',
                       place: 'Legume org',
                       price: '27,90',
                     ),
@@ -170,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
       ),
-      bottomNavigationBar: OrgsNavigationBar(),
+      // bottomNavigationBar: OrgsNavigationBar(),
     );
   }
 }
