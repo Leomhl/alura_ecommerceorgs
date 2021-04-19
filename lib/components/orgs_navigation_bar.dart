@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proj/core/app_colors.dart';
 
 class OrgsNavigationBar extends StatelessWidget {
   final String screen;
@@ -27,7 +28,7 @@ class OrgsNavigationBar extends StatelessWidget {
         child: BottomNavigationBar(
 
           showUnselectedLabels: true,
-          selectedItemColor: Color.fromRGBO(42, 159, 133, 1),
+          selectedItemColor: AppColors.green,
           unselectedItemColor: Colors.grey,
           items: [
             BottomNavigationBarItem(

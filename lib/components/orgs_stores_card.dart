@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proj/core/app_colors.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class StoresCard extends StatelessWidget {
@@ -57,8 +58,8 @@ class StoresCard extends StatelessWidget {
                     SizedBox(height: 5,),
                     SmoothStarRating(
                       rating: 5,
-                      color: Color.fromRGBO(42, 159, 133, 1),
-                      borderColor: Color.fromRGBO(42, 159, 133, 1),
+                      color: AppColors.green,
+                      borderColor: AppColors.green,
                       isReadOnly: false,
                       starCount: 5,
                     ),
@@ -83,7 +84,7 @@ class StoresCard extends StatelessWidget {
             Text(
                 'Distância',
                 style: TextStyle(
-                    color: Color.fromRGBO(163, 163, 163, 1)
+                    color: AppColors.darkGrey
                 )
             ),
             Text('$distance km')
@@ -98,7 +99,7 @@ class StoresCard extends StatelessWidget {
         children: [
           Icon(
               Icons.favorite,
-              color: Color.fromRGBO(42, 159, 133, 1),
+              color: AppColors.green,
             size: 30,
           ),
         ],

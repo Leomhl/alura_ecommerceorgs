@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proj/core/app_colors.dart';
 
 class OrgsSpotlightCard extends StatelessWidget {
   final String img;
@@ -46,7 +47,7 @@ class OrgsSpotlightCard extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.w700,
-                        color: Color.fromRGBO(70, 70, 70, 1)
+                        color: AppColors.darkGrey
                     ),
                   ),
                   Expanded(
@@ -60,7 +61,7 @@ class OrgsSpotlightCard extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(70, 70, 70, 1)
+                            color: AppColors.darkGrey
                           ),
                         ),
                       ),
@@ -71,7 +72,7 @@ class OrgsSpotlightCard extends StatelessWidget {
               ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   child: Container(
-                    color: Color.fromRGBO(254, 238, 210, 1),
+                    color: AppColors.white,
                     child: Image.asset(img),
                     width: 120,
                   ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proj/components/orgs_packages_card.dart';
+import 'package:proj/core/app_colors.dart';
+import 'package:proj/core/app_images.dart';
 import 'package:proj/screens/package_details_screen.dart';
 
 class ProducerDetailsScreen extends StatelessWidget {
@@ -9,7 +11,7 @@ class ProducerDetailsScreen extends StatelessWidget {
   final String title = 'Manjericão';
   final String description = 'Produtos orgânicos frescos colhidos todas as manhãs '
   'das nossas hortas. Trabalhamos apenas com produtos sem agrotóxicos!';
-  final String logo = 'assets/images/store1.png';
+  final String logo = AppImages.store1;
 
   // ProducerDetailsScreen({
   //   @required this.description,
@@ -43,7 +45,7 @@ class ProducerDetailsScreen extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  'assets/images/bg_producer.png',
+                  AppImages.bg_producer,
                   fit: BoxFit.fitWidth,
                   width: double.infinity,
                   height: 180,
@@ -83,7 +85,7 @@ class ProducerDetailsScreen extends StatelessWidget {
               child: Text(
                 description,
                 style: TextStyle(
-                  color: Color.fromRGBO(163, 163, 163, 1),
+                  color: AppColors.darkGrey,
                   fontSize: 18
                 )
               ),
@@ -104,13 +106,13 @@ class ProducerDetailsScreen extends StatelessWidget {
                 child: ListView(
                   children: [
                     OrgsPackagesCard(price: '12,00'),
-                    OrgsPackagesCard(price: '12,00'),
-                    OrgsPackagesCard(price: '12,00'),
-                    OrgsPackagesCard(price: '12,00'),
-                    OrgsPackagesCard(price: '12,00'),
-                    OrgsPackagesCard(price: '12,00'),
-                    OrgsPackagesCard(price: '12,00'),
-                    OrgsPackagesCard(price: '12,00'),
+                    OrgsPackagesCard(price: '13,00'),
+                    OrgsPackagesCard(price: '14,00'),
+                    OrgsPackagesCard(price: '15,00'),
+                    OrgsPackagesCard(price: '16,00'),
+                    OrgsPackagesCard(price: '17,00'),
+                    OrgsPackagesCard(price: '18,00'),
+                    OrgsPackagesCard(price: '19,00'),
                   ],
                 ),
               )

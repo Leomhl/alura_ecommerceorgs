@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:proj/core/app_colors.dart';
+import 'package:proj/core/app_images.dart';
 
 class OrgsHighlightsCard extends StatelessWidget {
   final String img;
@@ -34,7 +36,7 @@ class OrgsHighlightsCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset(
-                    'assets/images/logo_icon.png',
+                    AppImages.logo_icon,
                     width: 30,
                   ),
                   SizedBox(height: 5),
@@ -43,7 +45,7 @@ class OrgsHighlightsCard extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
-                        color: Color.fromRGBO(70, 70, 70, 1)
+                        color: AppColors.darkGrey
                     ),
                   ),
                   Text(
@@ -52,7 +54,7 @@ class OrgsHighlightsCard extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
-                        color: Color.fromRGBO(70, 70, 70, 1),
+                        color: AppColors.darkGrey,
                     ),
                   ),
                   SizedBox(height: 5),
@@ -65,7 +67,7 @@ class OrgsHighlightsCard extends StatelessWidget {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromRGBO(42, 159, 133, 1),
+                      primary: AppColors.green,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),

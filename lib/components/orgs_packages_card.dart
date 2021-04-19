@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:proj/core/app_colors.dart';
+import 'package:proj/core/app_images.dart';
 
 class OrgsPackagesCard extends StatelessWidget {
 
   // TODO remover a atribuição dos valores e descomentar o construtor
   final String title = 'Cenouras';
-  final String photo = 'assets/images/carrots.png';
+  final String photo = AppImages.carrots;
   final String description = 'Lorem ipsum dolor sit amet, consectetur'
   'adipiscing elit. Maecenas tincidunt cursus lectus. Mauris lacinia '
   'pharetra arcu, a fermentum justo vestibulum at. Nam venenatis leo ';
@@ -57,7 +59,7 @@ class OrgsPackagesCard extends StatelessWidget {
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
-                color: Color.fromRGBO(42, 159, 133, 1),
+                color: AppColors.green,
               ),
             ) : Container(),
             SizedBox(height: 15),

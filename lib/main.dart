@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:proj/screens/favorites_screen.dart';
 import 'package:proj/screens/home_screen.dart';
+import 'package:proj/screens/menu_screen.dart';
+import 'package:proj/screens/profile_screen.dart';
+import 'core/app_colors.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
         length: 4,
         child: Scaffold(
           bottomNavigationBar: TabBar(
-            labelColor: Color.fromRGBO(42, 159, 133, 1),
+            labelColor: AppColors.green,
             unselectedLabelColor: Colors.grey,
             tabs: [
               Tab(
@@ -44,22 +47,8 @@ class MyApp extends StatelessWidget {
             children: [
               HomeScreen(),
               FavoritesScreen(),
-              Container(
-                color: Colors.teal,
-                child: Center(
-                  child: Text(
-                    "Em desenvolvimento",
-                  ),
-                ),
-              ),
-              Container(
-                color: Colors.teal,
-                child: Center(
-                  child: Text(
-                    "Em desenvolvimento",
-                  ),
-                ),
-              ),
+              ProfileScreen(),
+              MenuScreen(),
             ],
           ),
         ),

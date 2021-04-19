@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:proj/components/orgs_navigation_bar.dart';
 import 'package:proj/components/orgs_stores_card.dart';
+import 'package:proj/core/app_colors.dart';
+import 'package:proj/core/app_images.dart';
 import 'package:proj/screens/producer_details_screen.dart';
 
 class FavoritesScreen extends StatelessWidget {
@@ -17,7 +18,7 @@ class FavoritesScreen extends StatelessWidget {
               style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.w700,
-                  color: Color.fromRGBO(70, 70, 70, 1)
+                  color: AppColors.darkGrey
               ),
             ),
             SizedBox(height: 10),
@@ -40,7 +41,7 @@ class FavoritesScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
                       );
                     },
-                    img: 'assets/images/store1.png',
+                    img: AppImages.store1,
                     title: 'Manjericão',
                   ),
                   StoresCard(
@@ -50,7 +51,7 @@ class FavoritesScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
                       );
                     },
-                    img: 'assets/images/store4.png',
+                    img: AppImages.store4,
                     title: 'Grow',
                   ),
                   StoresCard(
@@ -60,7 +61,7 @@ class FavoritesScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
                       );
                     },
-                    img: 'assets/images/store5.png',
+                    img: AppImages.store5,
                     title: 'Potager',
                   ),
                 ],
@@ -69,10 +70,6 @@ class FavoritesScreen extends StatelessWidget {
             ],
           ),
         ),
-
-      // TODO infelizmente essa bottomNavigationBar não vai ser utilizada,
-      // o esquema de tabs do flutter não permite esse tipo de componente
-      bottomNavigationBar: OrgsNavigationBar(screen: 'favorites'),
     );
   }
 }

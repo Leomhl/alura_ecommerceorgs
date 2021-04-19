@@ -5,6 +5,8 @@ import 'package:proj/components/orgs_navigation_bar.dart';
 import 'package:proj/components/orgs_search_bar.dart';
 import 'package:proj/components/orgs_spotlight_card.dart';
 import 'package:proj/components/orgs_stores_card.dart';
+import 'package:proj/core/app_colors.dart';
+import 'package:proj/core/app_images.dart';
 import 'package:proj/screens/producer_details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,14 +25,17 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset('assets/images/logo.png',height: kToolbarHeight,),
+                Image.asset(
+                  AppImages.logo,
+                  height: kToolbarHeight,
+                ),
                 SizedBox(height: 20,),
                 Text(
                   'Olá, Leonardo',
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w700,
-                    color: Color.fromRGBO(70, 70, 70, 1)
+                    color: AppColors.darkGrey
                   ),
                 ),
                 SizedBox(height: 10),
@@ -47,17 +52,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: 10),
                 OrgsCardsList(heightList: 160, cards: [
                   OrgsHighlightsCard(
-                    img: 'assets/images/fruits.png',
+                    img: AppImages.fruits,
                     title: 'Frutas frescas',
                     description: 'Cestas de frutas frescas',
-                    color: Color.fromRGBO(254, 238, 210, 1),
+                    color: AppColors.white,
                     btnAction: (){},
                   ),
                   OrgsHighlightsCard(
-                    img: 'assets/images/vegetables.png',
+                    img: AppImages.vegetables,
                     title: 'Legumes frescos',
                     description: 'Todo dia temos legumes frescos',
-                    color: Color.fromRGBO(254, 238, 210, 1),
+                    color: AppColors.white,
                     btnAction: (){},
                   ),
                 ]),
@@ -67,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
-                      color: Color.fromRGBO(70, 70, 70, 1)
+                      color: AppColors.darkGrey
                   ),
                 ),
                 SizedBox(height: 10),
@@ -75,15 +80,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   heightList: 140,
                   cards: [
                     OrgsSpotlightCard(
-                      img: 'assets/images/fruits.png',
-                      color: Color.fromRGBO(224, 255, 249, 1),
+                      img: AppImages.fruits,
+                      color: AppColors.frostMint,
                       description: 'Pack de frutas',
                       place: 'Grow',
                       price: '25,90',
                     ),
                     OrgsSpotlightCard(
-                      img: 'assets/images/vegetables.png',
-                      color: Color.fromRGBO(224, 255, 249, 1),
+                      img: AppImages.vegetables,
+                      color: AppColors.frostMint,
                       description: 'Pack de legumes',
                       place: 'Legume org',
                       price: '27,90',
@@ -94,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   'Mais acessados',
                   style: TextStyle(
-                    color: Color.fromRGBO(70, 70, 70, 1),
+                    color: AppColors.darkGrey,
                     fontWeight: FontWeight.w700,
                     fontSize: 20,
                   ),
@@ -107,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
                     );
                   },
-                  img: 'assets/images/store1.png',
+                  img: AppImages.store1,
                   distance: '10',
                   title: 'Manjericão',
                 ),
@@ -119,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
                     );
                   },
-                  img: 'assets/images/store2.png',
+                  img: AppImages.store2,
                   distance: '2',
                   title: 'Agrotoy',
                 ),
@@ -131,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
                     );
                   },
-                  img: 'assets/images/store3.png',
+                  img: AppImages.store3,
                   distance: '12',
                   title: 'Jenny Jack',
                 ),
@@ -143,7 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
                     );
                   },
-                  img: 'assets/images/store4.png',
+                  img: AppImages.store4,
                   distance: '10',
                   title: 'Grow',
                 ),
@@ -155,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       MaterialPageRoute(builder: (context) => ProducerDetailsScreen()),
                     );
                   },
-                  img: 'assets/images/store5.png',
+                  img: AppImages.store5,
                   distance: '5',
                   title: 'Potager',
                 ),

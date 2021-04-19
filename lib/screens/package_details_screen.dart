@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proj/components/orgs_packages_card.dart';
+import 'package:proj/core/app_colors.dart';
+import 'package:proj/core/app_images.dart';
 
 class PackageDetailsScreen extends StatelessWidget {
 
@@ -9,7 +11,7 @@ class PackageDetailsScreen extends StatelessWidget {
   final String producer = 'Manjericão';
   final String description = 'Produtos orgânicos frescos colhidos todas as manhãs '
   'das nossas hortas. Trabalhamos apenas com produtos sem agrotóxicos!';
-  final String logo = 'assets/images/store1.png';
+  final String logo = AppImages.logo;
   final String price = '12,00';
 
   // ProducerDetailsScreen({
@@ -39,7 +41,7 @@ class PackageDetailsScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
-            'assets/images/package_details.png',
+            AppImages.package_details,
             fit: BoxFit.fitWidth,
             width: double.infinity,
             height: 180,
@@ -101,7 +103,7 @@ class PackageDetailsScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
-                color: Color.fromRGBO(42, 159, 133, 1),
+                color: AppColors.green,
               ),
             ),
           ),
@@ -113,7 +115,7 @@ class PackageDetailsScreen extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: (){},
                 style: ElevatedButton.styleFrom(
-                  primary: Color.fromRGBO(42, 159, 133, 1), // background
+                  primary: AppColors.green, // background
                   onPrimary: Colors.white, // foreground
                 ),
                 child: Text('Comprar'),
