@@ -7,15 +7,19 @@ class OrgsHighlightsCard extends StatelessWidget {
   final String title;
   final Color color;
   final String description;
-  final Function btnAction;
+  final void Function()? btnAction;
 
   OrgsHighlightsCard({
-    @required this.img,
-    @required this.title,
-    @required this.description,
-    @required this.color,
-    @required this.btnAction
-  });
+    required this.img,
+    required this.title,
+    required this.description,
+    required this.color,
+    required this.btnAction
+  }): assert(img != null),
+      assert(title != null),
+      assert(description != null),
+      assert(color != null),
+      assert(btnAction != null);
 
   @override
   Widget build(BuildContext context) {

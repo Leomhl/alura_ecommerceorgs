@@ -8,14 +8,17 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  smooth_star_rating: ^1.1.1
+  smooth_star_rating:
+    git:
+      url: https://github.com/bhavin-concetto/smoothratingbar.git
+      ref: dev
 
 dev_dependencies:
   flutter_test:
@@ -45,7 +48,6 @@ flutter:
       fonts:
         - asset: assets/fonts/Montserrat-Regular.ttf
         - asset: assets/fonts/Montserrat-Bold.ttf
-#          style: bold
 
   # fonts:
   #   - family: Schyler

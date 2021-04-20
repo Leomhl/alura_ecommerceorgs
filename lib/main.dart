@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         length: 4,
         child: Scaffold(
           bottomNavigationBar: TabBar(
+
             labelColor: AppColors.green,
             unselectedLabelColor: Colors.grey,
             tabs: [

@@ -8,10 +8,12 @@ class OrgsProfileCard extends StatelessWidget {
   final String data;
 
   OrgsProfileCard({
-    @required this.icon,
-    @required this.textArea,
-    @required this.data,
-  });
+    required this.icon,
+    required this.textArea,
+    required this.data,
+  }): assert(icon != null),
+      assert(textArea != null),
+      assert(data != null);
 
   @override
   Widget build(BuildContext context) {

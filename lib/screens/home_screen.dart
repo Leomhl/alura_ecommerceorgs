@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proj/components/orgs_highlights_card.dart';
 import 'package:proj/components/orgs_cards_list.dart';
-import 'package:proj/components/orgs_navigation_bar.dart';
 import 'package:proj/components/orgs_search_bar.dart';
 import 'package:proj/components/orgs_spotlight_card.dart';
 import 'package:proj/components/orgs_stores_card.dart';
@@ -9,12 +8,7 @@ import 'package:proj/core/app_colors.dart';
 import 'package:proj/core/app_images.dart';
 import 'package:proj/screens/producer_details_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -164,11 +158,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   distance: '5',
                   title: 'Potager',
                 ),
+                SizedBox(height: 20),
               ],
             ),
           ),
       ),
-      // bottomNavigationBar: OrgsNavigationBar(),
     );
   }
 }

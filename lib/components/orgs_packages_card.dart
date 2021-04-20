@@ -13,11 +13,15 @@ class OrgsPackagesCard extends StatelessWidget {
   final String price;
 
   OrgsPackagesCard({
-    // @required this.title,
-    // @required this.photo,
-    // @required this.description,
-    @required this.price,
-  });
+    // required this.title,
+    // required this.photo,
+    // required this.description,
+    required this.price,
+  }): assert(price != null)//,
+  // assert(title != null),
+  // assert(photo != null),
+  // assert(description != null)
+  ;
 
   @override
   Widget build(BuildContext context) {

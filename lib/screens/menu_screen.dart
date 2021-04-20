@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:proj/components/orgs_menu_card.dart';
 import 'package:proj/components/orgs_rate_app.dart';
 import 'package:proj/core/app_colors.dart';
+import 'package:proj/screens/payment_screen.dart';
+import 'login_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   @override
@@ -26,27 +28,43 @@ class MenuScreen extends StatelessWidget {
               SizedBox(height: 30),
               OrgsMenuCard(
                 text: 'Início',
-                icon: Icons.home
+                icon: Icons.home,
+                action: () => DefaultTabController.of(context)!.index = 0,
               ),
               Divider(),
               OrgsMenuCard(
-                  text: 'Favoritos',
-                  icon: Icons.favorite
+                text: 'Favoritos',
+                icon: Icons.favorite,
+                action: () => DefaultTabController.of(context)!.index = 1,
               ),
               Divider(),
               OrgsMenuCard(
-                  text: 'Perfil',
-                  icon: Icons.person
+                text: 'Perfil',
+                icon: Icons.person,
+                action: () => DefaultTabController.of(context)!.index = 2,
               ),
               Divider(),
               OrgsMenuCard(
-                  text: 'Ajuda',
-                  icon: Icons.help
+                text: 'Métodos de pagamento',
+                icon: Icons.credit_card,
+                action: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PaymentScreen()),
+                  );
+                },
               ),
               Divider(),
               OrgsMenuCard(
-                  text: 'Sair',
-                  icon: Icons.logout
+                text: 'Sair',
+                icon: Icons.logout,
+                action: (){
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                    (route) => false
+                  );
+                },
               ),
               SizedBox(height: 30),
             ],

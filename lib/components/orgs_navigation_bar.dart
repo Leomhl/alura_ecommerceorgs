@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:proj/core/app_colors.dart';
 
+// Não será usada, o esquema de tabs não funcionou com ela
+// Mantive o código pela UI ter ficado maravilhosa! :P
+
 class OrgsNavigationBar extends StatelessWidget {
   final String screen;
 
   OrgsNavigationBar({
-    @required this.screen,
+    required this.screen,
   });
 
   @override

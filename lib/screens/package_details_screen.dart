@@ -11,7 +11,7 @@ class PackageDetailsScreen extends StatelessWidget {
   final String producer = 'Manjericão';
   final String description = 'Produtos orgânicos frescos colhidos todas as manhãs '
   'das nossas hortas. Trabalhamos apenas com produtos sem agrotóxicos!';
-  final String logo = AppImages.logo;
+  final String logo = AppImages.store1;
   final String price = '12,00';
 
   // ProducerDetailsScreen({
@@ -31,7 +31,7 @@ class PackageDetailsScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         title: Text(
-          'Detalhe da empresa',
+          'Detalhe da cesta',
           style: TextStyle(
               fontWeight: FontWeight.w700
           ),
@@ -137,7 +137,7 @@ class PackageDetailsScreen extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
                 child: ListView(
                   children: [
-                    OrgsPackagesCard(),
+                    OrgsPackagesCard(price: '15,00'),
                   ],
                 ),
               )
